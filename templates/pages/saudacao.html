@@ -1,0 +1,18 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="login-container">
+  <h1 class="max">Bem vindo ao teste de afinidade 🤠.</h1>
+  <img src="{%static 'imgs/saudacao.webp'%}">
+  <p class="m">Vamos fazer um joguinho. Você terá que responder algumas perguntinhas . Se acertar
+    todas ganhará um
+    prêmio.</p>
+  <form method="POST" action="{% url 'quiz' 1 %}">
+    {% csrf_token %}
+    <button type="submit" id="loginButton">Ok, vamo lá então!😀</button>
+  </form>
+
+</div>
+
+{% endblock content %}
