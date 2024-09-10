@@ -57,7 +57,7 @@ body {
 
 .login-container button:hover,
 .question-container button:hover {
-  background-color: #d54f32;
+  background-color: #e06a50;
   color: #ffffff;
 }
 
@@ -87,15 +87,15 @@ body {
 .buttonTeste {
   width: 100%;
   padding: 0.5rem;
-  border: 1px solid #ffac97;
+  border: none;
   border-radius: 0.25rem;
-  background-color: #ffffff;
-  color: #d54f32;
+  background-color: #d54f32;
+  color: white;
   font-weight: bold;
   border-radius: 10rem;
 }
 .buttonTeste:hover {
-  background-color: #d54f32;
+  background-color: #e06a50;
   color: #ffffff;
 }
 
