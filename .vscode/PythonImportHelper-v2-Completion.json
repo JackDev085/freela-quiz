@@ -17,15 +17,6 @@
         "documentation": {}
     },
     {
-        "label": "pathlib",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "pathlib",
-        "description": "pathlib",
-        "detail": "pathlib",
-        "documentation": {}
-    },
-    {
         "label": "Path",
         "importPath": "pathlib",
         "description": "pathlib",
@@ -90,43 +81,27 @@
         "documentation": {}
     },
     {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "static",
+        "importPath": "django.conf.urls.static",
+        "description": "django.conf.urls.static",
+        "isExtraImport": true,
+        "detail": "django.conf.urls.static",
+        "documentation": {}
+    },
+    {
         "label": "get_wsgi_application",
         "importPath": "django.core.wsgi",
         "description": "django.core.wsgi",
         "isExtraImport": true,
         "detail": "django.core.wsgi",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
         "documentation": {}
     },
     {
@@ -171,14 +146,6 @@
         "documentation": {}
     },
     {
-        "label": "views",
-        "importPath": "example",
-        "description": "example",
-        "isExtraImport": true,
-        "detail": "example",
-        "documentation": {}
-    },
-    {
         "label": "render",
         "importPath": "django.shortcuts",
         "description": "django.shortcuts",
@@ -211,6 +178,15 @@
         "documentation": {}
     },
     {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
         "label": "sys",
         "kind": 6,
         "isExtraImport": true,
@@ -233,7 +209,7 @@
         "kind": 5,
         "importPath": "api.settings",
         "description": "api.settings",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\nSECRET_KEY = 'django-insecure-=cldztbc4jg&xl0!x673!*v2_=p$$eu)=7*f#d0#zs$44xx-h^'\nDEBUG = True\nALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\nSECRET_KEY = 'django-insecure-=cldztbc4jg&xl0!x673!*v2_=p$$eu)=7*f#d0#zs$44xx-h^'\nDEBUG = True\nALLOWED_HOSTS = [\"*\",\".vercel.app\"]\nCSRF_TRUSTED_ORIGINS = ['https://localhost:8000']\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',",
         "detail": "api.settings",
         "documentation": {}
     },
@@ -242,7 +218,7 @@
         "kind": 5,
         "importPath": "api.settings",
         "description": "api.settings",
-        "peekOfCode": "SECRET_KEY = 'django-insecure-=cldztbc4jg&xl0!x673!*v2_=p$$eu)=7*f#d0#zs$44xx-h^'\nDEBUG = True\nALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',",
+        "peekOfCode": "SECRET_KEY = 'django-insecure-=cldztbc4jg&xl0!x673!*v2_=p$$eu)=7*f#d0#zs$44xx-h^'\nDEBUG = True\nALLOWED_HOSTS = [\"*\",\".vercel.app\"]\nCSRF_TRUSTED_ORIGINS = ['https://localhost:8000']\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
         "detail": "api.settings",
         "documentation": {}
     },
@@ -251,7 +227,7 @@
         "kind": 5,
         "importPath": "api.settings",
         "description": "api.settings",
-        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = [\"*\",\".vercel.app\"]\nCSRF_TRUSTED_ORIGINS = ['https://localhost:8000']\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',",
         "detail": "api.settings",
         "documentation": {}
     },
@@ -260,7 +236,16 @@
         "kind": 5,
         "importPath": "api.settings",
         "description": "api.settings",
-        "peekOfCode": "ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'example',",
+        "peekOfCode": "ALLOWED_HOSTS = [\"*\",\".vercel.app\"]\nCSRF_TRUSTED_ORIGINS = ['https://localhost:8000']\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "detail": "api.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CSRF_TRUSTED_ORIGINS",
+        "kind": 5,
+        "importPath": "api.settings",
+        "description": "api.settings",
+        "peekOfCode": "CSRF_TRUSTED_ORIGINS = ['https://localhost:8000']\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'quiz',",
         "detail": "api.settings",
         "documentation": {}
     },
@@ -269,7 +254,7 @@
         "kind": 5,
         "importPath": "api.settings",
         "description": "api.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'example',\n]\nMIDDLEWARE = [",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'quiz',\n]\nMIDDLEWARE = [",
         "detail": "api.settings",
         "documentation": {}
     },
@@ -278,7 +263,7 @@
         "kind": 5,
         "importPath": "api.settings",
         "description": "api.settings",
-        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]\nROOT_URLCONF = 'api.urls'",
+        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    \"whitenoise.middleware.WhiteNoiseMiddleware\",\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]\nROOT_URLCONF = 'api.urls'",
         "detail": "api.settings",
         "documentation": {}
     },
@@ -332,7 +317,7 @@
         "kind": 5,
         "importPath": "api.settings",
         "description": "api.settings",
-        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.1/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "LANGUAGE_CODE = 'pt-br'\nTIME_ZONE = 'America/Sao_Paulo'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.1/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [\n    BASE_DIR / \"static\",\n]",
         "detail": "api.settings",
         "documentation": {}
     },
@@ -341,7 +326,7 @@
         "kind": 5,
         "importPath": "api.settings",
         "description": "api.settings",
-        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.1/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "TIME_ZONE = 'America/Sao_Paulo'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.1/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [\n    BASE_DIR / \"static\",\n]\nSTATIC_ROOT = BASE_DIR / 'static_files'",
         "detail": "api.settings",
         "documentation": {}
     },
@@ -350,7 +335,7 @@
         "kind": 5,
         "importPath": "api.settings",
         "description": "api.settings",
-        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.1/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.1/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [\n    BASE_DIR / \"static\",\n]\nSTATIC_ROOT = BASE_DIR / 'static_files'\n# Default primary key field type",
         "detail": "api.settings",
         "documentation": {}
     },
@@ -359,7 +344,7 @@
         "kind": 5,
         "importPath": "api.settings",
         "description": "api.settings",
-        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.1/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.1/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [\n    BASE_DIR / \"static\",\n]\nSTATIC_ROOT = BASE_DIR / 'static_files'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field",
         "detail": "api.settings",
         "documentation": {}
     },
@@ -368,7 +353,25 @@
         "kind": 5,
         "importPath": "api.settings",
         "description": "api.settings",
-        "peekOfCode": "STATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "STATIC_URL = 'static/'\nSTATICFILES_DIRS = [\n    BASE_DIR / \"static\",\n]\nSTATIC_ROOT = BASE_DIR / 'static_files'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "api.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATICFILES_DIRS",
+        "kind": 5,
+        "importPath": "api.settings",
+        "description": "api.settings",
+        "peekOfCode": "STATICFILES_DIRS = [\n    BASE_DIR / \"static\",\n]\nSTATIC_ROOT = BASE_DIR / 'static_files'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "api.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_ROOT",
+        "kind": 5,
+        "importPath": "api.settings",
+        "description": "api.settings",
+        "peekOfCode": "STATIC_ROOT = BASE_DIR / 'static_files'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
         "detail": "api.settings",
         "documentation": {}
     },
@@ -386,7 +389,7 @@
         "kind": 5,
         "importPath": "api.urls",
         "description": "api.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include('example.urls')),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include('quiz.urls')),\n]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)",
         "detail": "api.urls",
         "documentation": {}
     },
@@ -402,136 +405,145 @@
     {
         "label": "Migration",
         "kind": 6,
-        "importPath": "example.migrations.0001_initial",
-        "description": "example.migrations.0001_initial",
-        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Quiz',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('question', models.CharField(max_length=255)),",
-        "detail": "example.migrations.0001_initial",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "example.migrations.0002_remove_quiz_alternative_a_remove_quiz_alternative_b_and_more",
-        "description": "example.migrations.0002_remove_quiz_alternative_a_remove_quiz_alternative_b_and_more",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('example', '0001_initial'),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name='quiz',\n            name='alternative_a',\n        ),\n        migrations.RemoveField(",
-        "detail": "example.migrations.0002_remove_quiz_alternative_a_remove_quiz_alternative_b_and_more",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "example.migrations.0003_alternative_rename_question_quiz_title_and_more",
-        "description": "example.migrations.0003_alternative_rename_question_quiz_title_and_more",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('example', '0002_remove_quiz_alternative_a_remove_quiz_alternative_b_and_more'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Alternative',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('text', models.CharField(max_length=255)),",
-        "detail": "example.migrations.0003_alternative_rename_question_quiz_title_and_more",
+        "importPath": "quiz.migrations.0001_initial",
+        "description": "quiz.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Alternative',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('text', models.CharField(max_length=255)),",
+        "detail": "quiz.migrations.0001_initial",
         "documentation": {}
     },
     {
         "label": "AlternativeInline",
         "kind": 6,
-        "importPath": "example.admin",
-        "description": "example.admin",
+        "importPath": "quiz.admin",
+        "description": "quiz.admin",
         "peekOfCode": "class AlternativeInline(admin.TabularInline):\n    model = Alternative\n    extra = 4  # Número de alternativas que queremos por padrão\nclass QuestionAdmin(admin.ModelAdmin):\n    inlines = [AlternativeInline]\nadmin.site.register(Quiz)\nadmin.site.register(Question, QuestionAdmin)\nadmin.site.register(Alternative)\nadmin.site.register(Answer)",
-        "detail": "example.admin",
+        "detail": "quiz.admin",
         "documentation": {}
     },
     {
         "label": "QuestionAdmin",
         "kind": 6,
-        "importPath": "example.admin",
-        "description": "example.admin",
+        "importPath": "quiz.admin",
+        "description": "quiz.admin",
         "peekOfCode": "class QuestionAdmin(admin.ModelAdmin):\n    inlines = [AlternativeInline]\nadmin.site.register(Quiz)\nadmin.site.register(Question, QuestionAdmin)\nadmin.site.register(Alternative)\nadmin.site.register(Answer)",
-        "detail": "example.admin",
+        "detail": "quiz.admin",
         "documentation": {}
     },
     {
         "label": "ExampleConfig",
         "kind": 6,
-        "importPath": "example.apps",
-        "description": "example.apps",
-        "peekOfCode": "class ExampleConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'example'",
-        "detail": "example.apps",
+        "importPath": "quiz.apps",
+        "description": "quiz.apps",
+        "peekOfCode": "class ExampleConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'quiz'",
+        "detail": "quiz.apps",
         "documentation": {}
     },
     {
         "label": "Quiz",
         "kind": 6,
-        "importPath": "example.models",
-        "description": "example.models",
+        "importPath": "quiz.models",
+        "description": "quiz.models",
         "peekOfCode": "class Quiz(models.Model):\n    title = models.CharField(max_length=255)\n    description = models.TextField(blank=True)\n    created_at = models.DateTimeField(auto_now_add=True)\n    updated_at = models.DateTimeField(auto_now=True)\n    def __str__(self):\n        return self.title\nclass Question(models.Model):\n    quiz = models.ForeignKey(Quiz, related_name='questions', on_delete=models.CASCADE)\n    text = models.CharField(max_length=255)",
-        "detail": "example.models",
+        "detail": "quiz.models",
         "documentation": {}
     },
     {
         "label": "Question",
         "kind": 6,
-        "importPath": "example.models",
-        "description": "example.models",
-        "peekOfCode": "class Question(models.Model):\n    quiz = models.ForeignKey(Quiz, related_name='questions', on_delete=models.CASCADE)\n    text = models.CharField(max_length=255)\n    def __str__(self):\n        return self.text\nclass Alternative(models.Model):\n    question = models.ForeignKey(Question, related_name='alternatives', on_delete=models.CASCADE)\n    text = models.CharField(max_length=255)\n    is_correct = models.BooleanField(default=False)\n    def __str__(self):",
-        "detail": "example.models",
+        "importPath": "quiz.models",
+        "description": "quiz.models",
+        "peekOfCode": "class Question(models.Model):\n    quiz = models.ForeignKey(Quiz, related_name='questions', on_delete=models.CASCADE)\n    text = models.CharField(max_length=255)\n    img_link = models.TextField(blank=True, null=True)\n    def __str__(self):\n        return self.text\nclass Alternative(models.Model):\n    question = models.ForeignKey(Question, related_name='alternatives', on_delete=models.CASCADE)\n    text = models.CharField(max_length=255)\n    is_correct = models.BooleanField(default=False)",
+        "detail": "quiz.models",
         "documentation": {}
     },
     {
         "label": "Alternative",
         "kind": 6,
-        "importPath": "example.models",
-        "description": "example.models",
+        "importPath": "quiz.models",
+        "description": "quiz.models",
         "peekOfCode": "class Alternative(models.Model):\n    question = models.ForeignKey(Question, related_name='alternatives', on_delete=models.CASCADE)\n    text = models.CharField(max_length=255)\n    is_correct = models.BooleanField(default=False)\n    def __str__(self):\n        return self.text\nclass Answer(models.Model):\n    question = models.ForeignKey(Question, related_name='answers', on_delete=models.CASCADE)\n    alternative = models.ForeignKey(Alternative, related_name='answers', on_delete=models.CASCADE)\n    created_at = models.DateTimeField(auto_now_add=True)",
-        "detail": "example.models",
+        "detail": "quiz.models",
         "documentation": {}
     },
     {
         "label": "Answer",
         "kind": 6,
-        "importPath": "example.models",
-        "description": "example.models",
+        "importPath": "quiz.models",
+        "description": "quiz.models",
         "peekOfCode": "class Answer(models.Model):\n    question = models.ForeignKey(Question, related_name='answers', on_delete=models.CASCADE)\n    alternative = models.ForeignKey(Alternative, related_name='answers', on_delete=models.CASCADE)\n    created_at = models.DateTimeField(auto_now_add=True)\n    def __str__(self):\n        return f\"Answer to {self.question.text}: {self.alternative.text}\"",
-        "detail": "example.models",
+        "detail": "quiz.models",
         "documentation": {}
     },
     {
         "label": "urlpatterns",
         "kind": 5,
-        "importPath": "example.urls",
-        "description": "example.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', views.login_view, name='login'),\n    path('quiz/<int:id>/', views.quiz_view, name='quiz'),\n    path('quiz_submit/<int:id>/', views.quiz_submit, name='quiz_submit'),\n    path('saudacao',views.saudacao,name='saudacao'),\n]",
-        "detail": "example.urls",
+        "importPath": "quiz.urls",
+        "description": "quiz.urls",
+        "peekOfCode": "urlpatterns = [\n    path('', views.login_view, name='login'),\n    path(\"quiz\", views.redir, name=\"redirect\"),\n    path('quiz/<int:id>/', views.quiz_view, name='quiz'),\n    path('quiz_submit/<int:id>/', views.quiz_submit, name='submit'),\n    path(\"saudacao\", views.saudacao,name=\"saudacao\"),\n    path('mario',views.mario,name='mario'),\n    path('premio',views.premio,name='premio'),\n]",
+        "detail": "quiz.urls",
+        "documentation": {}
+    },
+    {
+        "label": "redir",
+        "kind": 2,
+        "importPath": "quiz.views",
+        "description": "quiz.views",
+        "peekOfCode": "def redir(request):\n    return redirect(\"quiz\",1)\ndef login_view(request):\n    if request.method == \"POST\":\n        apelido = request.POST.get(\"jogo\")\n        if str(apelido).lower() == \"sophie\":\n            return redirect(reverse('saudacao'))\n        else:\n            messages.error(request, \"Digite a palavra certa. Tente novamente.\")\n            return redirect(reverse('login'))",
+        "detail": "quiz.views",
         "documentation": {}
     },
     {
         "label": "login_view",
         "kind": 2,
-        "importPath": "example.views",
-        "description": "example.views",
-        "peekOfCode": "def login_view(request):\n    if request.method == \"POST\":\n        apelido = request.POST.get(\"apelido\")\n        if apelido == \"bonjovi\":\n            return redirect(reverse('saudacao'))  # Substitua 'quiz' pelo nome da sua URL do quiz\n        else:\n            messages.error(request, \"Apelido incorreto. Tente novamente.\")\n            return redirect(reverse('login'))  # Substitua 'login' pelo nome da sua URL de login\n    return render(request, \"index.html\")\ndef quiz_view(request, id):",
-        "detail": "example.views",
+        "importPath": "quiz.views",
+        "description": "quiz.views",
+        "peekOfCode": "def login_view(request):\n    if request.method == \"POST\":\n        apelido = request.POST.get(\"jogo\")\n        if str(apelido).lower() == \"sophie\":\n            return redirect(reverse('saudacao'))\n        else:\n            messages.error(request, \"Digite a palavra certa. Tente novamente.\")\n            return redirect(reverse('login'))\n    return render(request, \"pages/index.html\")\ndef quiz_view(request, id):",
+        "detail": "quiz.views",
         "documentation": {}
     },
     {
         "label": "quiz_view",
         "kind": 2,
-        "importPath": "example.views",
-        "description": "example.views",
-        "peekOfCode": "def quiz_view(request, id):\n    quiz = get_object_or_404(Quiz, pk=1)\n    quiz_questions = Question.objects.filter(quiz=quiz)\n    quiz_questions = quiz.questions.all()\n    quiz_question = get_object_or_404(Question, pk=id)\n    quiz_alternatives = quiz_question.alternatives.all()\n    return render(request, 'quiz.html', {'quiz': quiz_question, 'quiz_id': id, 'alternatives': quiz_alternatives})\ndef quiz_submit(request, id):\n    if request.method == \"POST\":\n        quiz = Quiz.objects.get(pk=1)",
-        "detail": "example.views",
+        "importPath": "quiz.views",
+        "description": "quiz.views",
+        "peekOfCode": "def quiz_view(request, id):\n    if id == 11:\n        return redirect('mario')\n    quiz_question = get_object_or_404(Question, pk=id)\n    quiz_alternatives = quiz_question.alternatives.all()\n    return render(request, 'pages/quiz.html', {'quiz': quiz_question,\"id\":id,'alternatives': quiz_alternatives})\ndef quiz_submit(request, id):\n    if request.method == \"POST\":\n        alternativa_correta = Alternative.objects.filter(question=id, is_correct=True).first()\n        alternativa_enviada = request.POST.get('resposta')",
+        "detail": "quiz.views",
         "documentation": {}
     },
     {
         "label": "quiz_submit",
         "kind": 2,
-        "importPath": "example.views",
-        "description": "example.views",
-        "peekOfCode": "def quiz_submit(request, id):\n    if request.method == \"POST\":\n        quiz = Quiz.objects.get(pk=1)\n        alternativa_correta = Alternative.objects.filter(id=id)\n        alternativa_correta =alternativa_correta.first().id\n        question_id = request.POST.get('alternative')\n        print(\"Questão correta = \", alternativa_correta)\n        print(\"alternativa escolhida = \", question_id)\n        if int(alternativa_correta) == int(question_id):\n            messages.success(request, \"Você acertou!\")",
-        "detail": "example.views",
+        "importPath": "quiz.views",
+        "description": "quiz.views",
+        "peekOfCode": "def quiz_submit(request, id):\n    if request.method == \"POST\":\n        alternativa_correta = Alternative.objects.filter(question=id, is_correct=True).first()\n        alternativa_enviada = request.POST.get('resposta')\n        print(alternativa_correta, alternativa_enviada)\n        if str(alternativa_correta) == str(alternativa_enviada):\n            return redirect('quiz', id+1)\n        else:\n           messages.error(request, \"Você errou!\")\n           return redirect('quiz', 1)",
+        "detail": "quiz.views",
         "documentation": {}
     },
     {
         "label": "saudacao",
         "kind": 2,
-        "importPath": "example.views",
-        "description": "example.views",
-        "peekOfCode": "def saudacao(request):\n    return render(request, 'saudacao.html')",
-        "detail": "example.views",
+        "importPath": "quiz.views",
+        "description": "quiz.views",
+        "peekOfCode": "def saudacao(request):\n    return render(request, 'pages/saudacao.html')\ndef mario(request):\n    return render(request, 'pages/mario.html')\ndef premio(request):\n    return render(request, 'pages/premio.html')",
+        "detail": "quiz.views",
+        "documentation": {}
+    },
+    {
+        "label": "mario",
+        "kind": 2,
+        "importPath": "quiz.views",
+        "description": "quiz.views",
+        "peekOfCode": "def mario(request):\n    return render(request, 'pages/mario.html')\ndef premio(request):\n    return render(request, 'pages/premio.html')",
+        "detail": "quiz.views",
+        "documentation": {}
+    },
+    {
+        "label": "premio",
+        "kind": 2,
+        "importPath": "quiz.views",
+        "description": "quiz.views",
+        "peekOfCode": "def premio(request):\n    return render(request, 'pages/premio.html')",
+        "detail": "quiz.views",
         "documentation": {}
     },
     {

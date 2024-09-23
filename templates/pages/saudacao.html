@@ -3,16 +3,31 @@
 {% block content %}
 
 <div class="login-container">
-  <h1 class="max">Bem vinda ao teste de afinidade 🤠.</h1>
-  <img src="{%static 'imgs/saudacao.webp'%}">
-  <p class="m">Vamos fazer um joguinho. Você terá que responder algumas perguntinhas. Se acertar
-    todas, ganhará um
-    prêmio.</p>
-  <form method="POST" action="{% url 'quiz' 1 %}">
+  <h1 class="max">Hellou🤠.</h1>
+  <img src="{%static 'imgs/saudacao.jpg'%}">
+  <p class="m">Antes que vc desista, tenho uma brincadeira pra fazer com vc, divirta-se!<br>
+    <strong>Obs: sei que é esperta e vai acertar tudo, e no final receberá uma recompensa.</strong></p>
     {% csrf_token %}
-    <button type="submit" id="loginButton">Ok, vamo lá então!😀</button>
-  </form>
+    <div class="botoes">
+      <a href="{% url "mario" %}"id="loginButton">Sim😀</a>
+      <button type="submit" id="button_no">Não🤔</button>
+    </div>
 
 </div>
+<script>
+  document.getElementById('button_no').addEventListener('click', function(event) {
+    event.preventDefault(); // Evita o envio do formulário
+    const button = event.target;
+    const container = document.querySelector('.login-container');
+    const containerRect = container.getBoundingClientRect();
+    
+    const randomX = Math.random() * (containerRect.width - button.offsetWidth);
+    const randomY = Math.random() * (containerRect.height - button.offsetHeight);
+    
+    button.style.position = 'absolute';
+    button.style.left = `${randomX}px`;
+    button.style.top = `${randomY}px`;
+  });
+</script>
 
 {% endblock content %}

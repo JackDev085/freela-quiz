@@ -4,10 +4,12 @@
     {% for mensage in messages %}
     <p class="error">{{ mensage }}</p>
     {% endfor %}
-    <h1>Para começar digite a <strong>capital do brasil</strong></h1>
+    <h1>Bem vinda, Talita!</h1>
+    <img src="{% static "imgs/img_perfil.png" %}" alt="imagem da aniversariante">
     <form method="POST" action="{% url 'login' %}">
+    <p class="m1">Senha</p>
         {% csrf_token %}
-        <input type="text" placeholder="Digite aqui" name="jogo" id="jogo">
+        <input id="input_senha" type="text" placeholder="Dica: nome da cachorrinha" name="jogo" id="jogo">
         <button type="submit" id="loginButton">Enviar</button>
     </form>
 </div>

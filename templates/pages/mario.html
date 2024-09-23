@@ -20,11 +20,12 @@
 
         .game-container {
             position: relative;
-            width: 800px;
+            width: 100vw;
             height: 300px;
             overflow: hidden;
             background-color: #87CEEB;
             border: 2px solid #000;
+            padding: 10px;
         }
 
         .mario {
@@ -57,7 +58,7 @@
             }
 
             100% {
-                right: 800px;
+                right: 100vw;
             }
         }
 
@@ -97,6 +98,9 @@
             border-radius: 5px;
             text-align: center;
         }
+        .center{
+            text-align: center;
+        }
 
         .modal-content button {
             margin: 10px;
@@ -106,18 +110,47 @@
             color: #fff;
             cursor: pointer;
         }
-        @media (max-width:600px) {
-            
+
+        @media (max-width: 600px) {
+            .game-container {
+                height: 200px;
+            }
+
+            .mario {
+                width: 30px;
+                height: 30px;
+                background-position: 0 -30px;
+            }
+
+            .pipe {
+                width: 30px;
+                height: 30px;
+            }
+
+            @keyframes jump {
+                0% {
+                    bottom: 0;
+                }
+
+                50% {
+                    bottom: 100px;
+                }
+
+                100% {
+                    bottom: 0;
+                }
+            }
         }
     </style>
 </head>
 
 <body>
-    <h1>Salve o bonjovi do panda, não deixe que o encoste nele</h1>
+    <h2 class="center">Salve o bonjovi do panda, não deixe que o encoste nele</h2>
     <div class="game-container">
         <div class="mario" id="mario"></div>
         <div class="pipe" id="pipe"></div>
     </div>
+    <h2 class="center">Aperte na tela para pular</h2>
 
     <div class="modal" id="successModal">
         <div class="modal-content">
@@ -140,9 +173,9 @@
         const gameOverModal = document.getElementById('gameOverModal');
         const successButton = document.getElementById('successButton');
         const retryButton = document.getElementById('retryButton');
-
+    
         let jumpCount = 0;
-
+    
         function jump() {
             if (!mario.classList.contains('jump')) {
                 mario.classList.add('jump');
@@ -150,44 +183,47 @@
                     mario.classList.remove('jump');
                 }, 500);
                 jumpCount++;
-                if (jumpCount >= 13) {
+                if (jumpCount >= 3) {
                     successModal.style.display = 'flex';
                     clearInterval(checkCollision);
                 }
             }
         }
-
-        document.addEventListener('keydown', function (event) {
+    
+        document.addEventListener('keydown', function(event) {
             if (event.code === 'Space') {
                 jump();
             }
         });
-
-        document.addEventListener('touchstart', function () {
+    
+        document.addEventListener('touchstart', function() {
             jump();
         });
-
+    
         const checkCollision = setInterval(() => {
-            const marioBottom = parseInt(window.getComputedStyle(mario).getPropertyValue('bottom'));
-            const pipeLeft = parseInt(window.getComputedStyle(pipe).getPropertyValue('left'));
-
-            if (pipeLeft > 0 && pipeLeft < 80 && marioBottom <= 36) {
+            const marioRect = mario.getBoundingClientRect();
+            const pipeRect = pipe.getBoundingClientRect();
+    
+            if (
+                marioRect.right > pipeRect.left &&
+                marioRect.left < pipeRect.right &&
+                marioRect.bottom > pipeRect.top &&
+                marioRect.top < pipeRect.bottom
+            ) {
                 pipe.style.animation = 'none';
-                pipe.style.left = `${pipeLeft}px`;
+                pipe.style.left = `${pipeRect.left}px`;
                 gameOverModal.style.display = 'flex';
                 clearInterval(checkCollision);
             }
         }, 10);
-
+    
         successButton.addEventListener('click', () => {
-            window.location.href = '{% url "premio" %}';
+            window.location.href = '{% url "redirect" %}';
         });
-
-
+    
         retryButton.addEventListener('click', () => {
             window.location.reload();
         });
-
     </script>
 </body>
 

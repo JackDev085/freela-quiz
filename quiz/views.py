@@ -4,11 +4,14 @@ from django.contrib import messages
 from .models import Question, Alternative
 from django.shortcuts import render, get_object_or_404
 import random
+
+def redir(request):
+    return redirect("quiz",1)
 def login_view(request):
     if request.method == "POST":
         apelido = request.POST.get("jogo")
         
-        if str(apelido).lower() == "brasilia"or str(apelido).lower() == "brasília":
+        if str(apelido).lower() == "sophie":
             return redirect(reverse('saudacao'))
         else:
             messages.error(request, "Digite a palavra certa. Tente novamente.")
