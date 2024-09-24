@@ -21,10 +21,13 @@ def login_view(request):
 def quiz_view(request, id):
    
     if id == 11:
-        return redirect('mario')
+        return redirect('premio')
     quiz_question = get_object_or_404(Question, pk=id)
     quiz_alternatives = quiz_question.alternatives.all()
-    return render(request, 'pages/quiz.html', {'quiz': quiz_question,"id":id,'alternatives': quiz_alternatives})
+    img = quiz_question.img_link
+    print("KKK")
+    print(img)
+    return render(request, 'pages/quiz.html', {'quiz': quiz_question,"id":id,'alternatives': quiz_alternatives,"img":img})
 
 def quiz_submit(request, id):
     if request.method == "POST":

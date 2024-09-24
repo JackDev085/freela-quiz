@@ -16,8 +16,8 @@
                 {% csrf_token %}
 
                 <div class="mb-3">
+                    <img class="img_question" src='{% static img %}'>
                     {% if quiz.img_link %}
-                    <img class="img_question" src={% static quiz.img_link %}>
                     {% endif %}
 
                     {% for alternative in alternatives %}

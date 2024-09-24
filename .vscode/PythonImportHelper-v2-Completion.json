@@ -209,7 +209,7 @@
         "kind": 5,
         "importPath": "api.settings",
         "description": "api.settings",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\nSECRET_KEY = 'django-insecure-=cldztbc4jg&xl0!x673!*v2_=p$$eu)=7*f#d0#zs$44xx-h^'\nDEBUG = True\nALLOWED_HOSTS = [\"*\",\".vercel.app\"]\nCSRF_TRUSTED_ORIGINS = ['https://localhost:8000']\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\nSECRET_KEY = 'django-insecure-=cldztbc4jg&xl0!x673!*v2_=p$$eu)=7*f#d0#zs$44xx-h^'\nDEBUG = False\nALLOWED_HOSTS = [\"*\",\".vercel.app\"]\nCSRF_TRUSTED_ORIGINS = ['https://localhost:8000']\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',",
         "detail": "api.settings",
         "documentation": {}
     },
@@ -218,7 +218,7 @@
         "kind": 5,
         "importPath": "api.settings",
         "description": "api.settings",
-        "peekOfCode": "SECRET_KEY = 'django-insecure-=cldztbc4jg&xl0!x673!*v2_=p$$eu)=7*f#d0#zs$44xx-h^'\nDEBUG = True\nALLOWED_HOSTS = [\"*\",\".vercel.app\"]\nCSRF_TRUSTED_ORIGINS = ['https://localhost:8000']\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "peekOfCode": "SECRET_KEY = 'django-insecure-=cldztbc4jg&xl0!x673!*v2_=p$$eu)=7*f#d0#zs$44xx-h^'\nDEBUG = False\nALLOWED_HOSTS = [\"*\",\".vercel.app\"]\nCSRF_TRUSTED_ORIGINS = ['https://localhost:8000']\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
         "detail": "api.settings",
         "documentation": {}
     },
@@ -227,7 +227,7 @@
         "kind": 5,
         "importPath": "api.settings",
         "description": "api.settings",
-        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = [\"*\",\".vercel.app\"]\nCSRF_TRUSTED_ORIGINS = ['https://localhost:8000']\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',",
+        "peekOfCode": "DEBUG = False\nALLOWED_HOSTS = [\"*\",\".vercel.app\"]\nCSRF_TRUSTED_ORIGINS = ['https://localhost:8000']\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',",
         "detail": "api.settings",
         "documentation": {}
     },
@@ -506,7 +506,7 @@
         "kind": 2,
         "importPath": "quiz.views",
         "description": "quiz.views",
-        "peekOfCode": "def quiz_view(request, id):\n    if id == 11:\n        return redirect('mario')\n    quiz_question = get_object_or_404(Question, pk=id)\n    quiz_alternatives = quiz_question.alternatives.all()\n    return render(request, 'pages/quiz.html', {'quiz': quiz_question,\"id\":id,'alternatives': quiz_alternatives})\ndef quiz_submit(request, id):\n    if request.method == \"POST\":\n        alternativa_correta = Alternative.objects.filter(question=id, is_correct=True).first()\n        alternativa_enviada = request.POST.get('resposta')",
+        "peekOfCode": "def quiz_view(request, id):\n    if id == 11:\n        return redirect('premio')\n    quiz_question = get_object_or_404(Question, pk=id)\n    quiz_alternatives = quiz_question.alternatives.all()\n    img = quiz_question.img_link\n    print(\"KKK\")\n    print(img)\n    return render(request, 'pages/quiz.html', {'quiz': quiz_question,\"id\":id,'alternatives': quiz_alternatives,\"img\":img})\ndef quiz_submit(request, id):",
         "detail": "quiz.views",
         "documentation": {}
     },
