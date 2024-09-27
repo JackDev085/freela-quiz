@@ -479,7 +479,7 @@
         "kind": 5,
         "importPath": "quiz.urls",
         "description": "quiz.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', views.login_view, name='login'),\n    path(\"quiz\", views.redir, name=\"redirect\"),\n    path('quiz/<int:id>/', views.quiz_view, name='quiz'),\n    path('quiz_submit/<int:id>/', views.quiz_submit, name='submit'),\n    path(\"saudacao\", views.saudacao,name=\"saudacao\"),\n    path('mario',views.mario,name='mario'),\n    path('premio',views.premio,name='premio'),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('', views.login_view, name='login'),\n    path(\"quiz\", views.redir, name=\"redirect\"),\n    path('quiz/<int:id>/', views.quiz_view, name='quiz'),\n    path('quiz_submit/<int:id>/', views.quiz_submit, name='submit'),\n    path(\"saudacao\", views.saudacao,name=\"saudacao\"),\n    path('mario',views.mario,name='mario'),\n    path('premio',views.premio,name='premio'),\n    path(\"mensagem\",views.mensagem, name=\"mensagem\")\n]",
         "detail": "quiz.urls",
         "documentation": {}
     },
@@ -515,7 +515,7 @@
         "kind": 2,
         "importPath": "quiz.views",
         "description": "quiz.views",
-        "peekOfCode": "def quiz_submit(request, id):\n    if request.method == \"POST\":\n        alternativa_correta = Alternative.objects.filter(question=id, is_correct=True).first()\n        alternativa_enviada = request.POST.get('resposta')\n        print(alternativa_correta, alternativa_enviada)\n        if str(alternativa_correta) == str(alternativa_enviada):\n            return redirect('quiz', id+1)\n        else:\n           messages.error(request, \"Você errou!\")\n           return redirect('quiz', 1)",
+        "peekOfCode": "def quiz_submit(request, id):\n    if request.method == \"POST\":\n        alternativa_correta = Alternative.objects.filter(question=id, is_correct=True).first()\n        alternativa_enviada = request.POST.get('resposta')\n        print(alternativa_correta, alternativa_enviada)\n        if str(alternativa_correta) == str(alternativa_enviada):\n            return redirect('quiz', id+1)\n        else:\n           return redirect(reverse('quiz', args=[1]))\n    return redirect('quiz', 1)",
         "detail": "quiz.views",
         "documentation": {}
     },
@@ -524,7 +524,7 @@
         "kind": 2,
         "importPath": "quiz.views",
         "description": "quiz.views",
-        "peekOfCode": "def saudacao(request):\n    return render(request, 'pages/saudacao.html')\ndef mario(request):\n    return render(request, 'pages/mario.html')\ndef premio(request):\n    return render(request, 'pages/premio.html')",
+        "peekOfCode": "def saudacao(request):\n    return render(request, 'pages/saudacao.html')\ndef mario(request):\n    return render(request, 'pages/mario.html')\ndef premio(request):\n    return render(request, 'pages/premio.html')\ndef mensagem(request):\n    return render(request, 'pages/mensagem.html')",
         "detail": "quiz.views",
         "documentation": {}
     },
@@ -533,7 +533,7 @@
         "kind": 2,
         "importPath": "quiz.views",
         "description": "quiz.views",
-        "peekOfCode": "def mario(request):\n    return render(request, 'pages/mario.html')\ndef premio(request):\n    return render(request, 'pages/premio.html')",
+        "peekOfCode": "def mario(request):\n    return render(request, 'pages/mario.html')\ndef premio(request):\n    return render(request, 'pages/premio.html')\ndef mensagem(request):\n    return render(request, 'pages/mensagem.html')",
         "detail": "quiz.views",
         "documentation": {}
     },
@@ -542,7 +542,16 @@
         "kind": 2,
         "importPath": "quiz.views",
         "description": "quiz.views",
-        "peekOfCode": "def premio(request):\n    return render(request, 'pages/premio.html')",
+        "peekOfCode": "def premio(request):\n    return render(request, 'pages/premio.html')\ndef mensagem(request):\n    return render(request, 'pages/mensagem.html')",
+        "detail": "quiz.views",
+        "documentation": {}
+    },
+    {
+        "label": "mensagem",
+        "kind": 2,
+        "importPath": "quiz.views",
+        "description": "quiz.views",
+        "peekOfCode": "def mensagem(request):\n    return render(request, 'pages/mensagem.html')",
         "detail": "quiz.views",
         "documentation": {}
     },

@@ -1,9 +1,10 @@
 {% extends "base/base.html" %} {% load static %}
 {% block content %}
 <div class="login-container">
-    {% for mensage in messages %}
-    <p class="error">{{ mensage }}</p>
-    {% endfor %}
+
+    {% if messages %}
+        <p class="error">{{ messages|last }}</p>
+    {% endif %}
     <h1>Bem vinda, Talita!</h1>
     <img src="{% static "imgs/img_perfil.png" %}" alt="imagem da aniversariante">
     <form method="POST" action="{% url 'login' %}">

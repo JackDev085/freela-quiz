@@ -4,5 +4,7 @@
 {% block content %}
 <h1 class="text-final">Parabéns! Você concluiu o jogo.</h1>
 <iframe width="100%" height="400rem" src="https://www.youtube.com/embed/04854XqcfCY?si=Jd6Y9JcJfR1zMpyy&amp;start=38" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay=1; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<p style="text-align:center">Toque <a href="#">aqui</a> e receba seu prêmio</p>
+<div class="link">
+    <a id="premioButton" style="padding:1rem;" href="{% url "mensagem" %}">receber seu prêmio</a>
+</div>
 {% endblock content %}

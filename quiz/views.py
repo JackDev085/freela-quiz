@@ -37,8 +37,7 @@ def quiz_submit(request, id):
         if str(alternativa_correta) == str(alternativa_enviada):
             return redirect('quiz', id+1)
         else:
-           messages.error(request, "Você errou!")
-           return redirect('quiz', 1)
+           return redirect(reverse('quiz', args=[1]))
     return redirect('quiz', 1)
          
 
@@ -52,3 +51,5 @@ def premio(request):
     return render(request, 'pages/premio.html')
 
 
+def mensagem(request):
+    return render(request, 'pages/mensagem.html')
